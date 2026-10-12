@@ -139,6 +139,24 @@
   .food{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:var(--wrap);margin:0 auto;}
   .food img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-lg);}
 
+  /* ---------- SEO-блок «Читать далее» (нативный details, текст в HTML) ---------- */
+  .seo-article{max-width:820px;margin:0 auto;}
+  .seo-article .intro{font-size:clamp(18px,2vw,22px);line-height:1.6;font-weight:300;text-align:center;}
+  .seo-article details{margin-top:24px;text-align:center;}
+  .seo-article summary{list-style:none;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border:1.5px solid var(--dark);border-radius:var(--pill);font-size:15px;font-weight:600;cursor:pointer;transition:background .15s ease,color .15s ease;}
+  .seo-article summary::-webkit-details-marker{display:none;}
+  .seo-article summary:hover{background:var(--dark);color:#fff;}
+  .seo-article summary .less{display:none;}
+  .seo-article details[open] summary .more{display:none;}
+  .seo-article details[open] summary .less{display:inline;}
+  .seo-body{text-align:left;margin-top:36px;font-size:17px;line-height:1.75;color:var(--ink);}
+  .seo-body h2{font-size:clamp(22px,2.4vw,28px);line-height:1.2;font-weight:700;letter-spacing:-.01em;margin:40px 0 14px;}
+  .seo-body h2:first-child{margin-top:0;}
+  .seo-body p{margin:0 0 14px;}
+  .seo-body ul,.seo-body ol{margin:0 0 16px;padding-left:22px;}
+  .seo-body li{margin-bottom:8px;}
+  .seo-body a{text-decoration:underline;text-underline-offset:3px;}
+  .seo-body .seo-cta{margin-top:28px;}
   /* ---------- 5. почему СТОРИ ---------- */
   .why{background:var(--card);padding-top:56px!important;}
   .why .lead{max-width:860px;margin:0 auto;text-align:center;font-size:clamp(19px,2.2vw,24px);line-height:1.55;font-weight:300;}
@@ -379,6 +397,61 @@
     <img width="1280" height="1280" src="assets/furshet-4-croissant.webp" alt="Круассан-сэндвичи с тунцом и лососем от 3F" loading="lazy">
     <img width="1280" height="853" src="assets/furshet-5-canape.webp" alt="Канапе с инжиром от 3F" loading="lazy">
     <img width="853" height="1280" src="assets/furshet-6-raspberry.webp" alt="Десерт с малиной от 3F" loading="lazy">
+  </div>
+</section>
+
+<!-- SEO-БЛОК: вводный абзац виден сразу, полный текст — в HTML внутри <details>, раскрывается по клику -->
+<section class="block sheet seo-section" id="about-conference" style="background:var(--card);">
+  <div class="seo-article">
+    <p class="intro">Площадка для конференций в центре Москвы — это не только зал: важны регистрация гостей, техника, рассадка и удобная дорога от метро. Ниже — короткое руководство, как выбрать место и что уточнить до бронирования, а также что из этого уже есть в СТОРИ.</p>
+    <details>
+      <summary><span class="more">Читать далее</span><span class="less">Свернуть</span></summary>
+      <div class="seo-body">
+        <h2>Как выбрать площадку для конференций</h2>
+        <p>Начинайте не с зала, а с программы: сколько будет участников и спикеров, нужны ли перерывы, регистрация, выступления со сцены и презентации на экране. Из этого складываются требования к площадке.</p>
+        <p>Первое, что нужно выяснить, — вместимость. Она зависит от рассадки: рядами в зал помещается больше людей, чем за столами, поэтому цифру «до N человек» всегда уточняйте для своего формата. В СТОРИ для конференции заявлена вместимость до 160 человек; точное количество под вашу рассадку мы уточняем при заявке.</p>
+
+        <h2>На что смотреть при выборе конференц-зала в Москве</h2>
+        <ul>
+          <li><strong>Рассадка.</strong> Ряды, столы или свободный формат — под ваш сценарий. Спросите, как организована схема и можно ли согласовать её заранее.</li>
+          <li><strong>Техника и что входит в аренду.</strong> Экран, звук, свет, микрофоны. Уточните, что включено в стоимость, а что оплачивается отдельно. В СТОРИ в аренду входят LED-экран, звук, архитектурный свет, радиомикрофоны и ноутбук.</li>
+          <li><strong>Затемнение.</strong> Оно нужно, чтобы слайды и видео были хорошо видны. В СТОРИ зал затемняется полностью.</li>
+          <li><strong>Сцена и работа техкоманды.</strong> Хорошо, когда у технических специалистов есть отдельный путь к сцене и они не мешают гостям. В СТОРИ для этого есть отдельный вход на сцену.</li>
+          <li><strong>Регистрация и гардероб.</strong> Участникам нужно, где оставить одежду и получить бейдж, не создавая очереди в зале. В СТОРИ есть зона регистрации у входа и гардероб рядом.</li>
+          <li><strong>Место для общения.</strong> Перерывы и нетворкинг проходят лучше в отдельной зоне. В СТОРИ для этого есть лаунж и бар.</li>
+          <li><strong>Приватность.</strong> На время вашего мероприятия площадка работает только для вас, с отдельным входом.</li>
+        </ul>
+
+        <h2>Как снять зал для конференции: что уточнить до бронирования</h2>
+        <p>Прежде чем решить, где снять зал для конференции, составьте для каждой площадки один и тот же список вопросов. Так варианты проще сравнивать.</p>
+        <ol>
+          <li><strong>Дата и время.</strong> Свободна ли ваша дата, во сколько можно начать подготовку и до какого часа работает площадка. В СТОРИ аренда действует с 8:00 до 3:00.</li>
+          <li><strong>Стоимость.</strong> От чего она зависит и что в неё входит. В СТОРИ итоговая стоимость зависит от даты, длительности и формата мероприятия.</li>
+          <li><strong>Техника.</strong> Какой комплект есть на месте и нужно ли что-то привозить. Если у выступающих особые требования, сообщите о них заранее.</li>
+          <li><strong>Кейтеринг.</strong> Кто готовит и как это оплачивается. В СТОРИ кейтеринг ведёт партнёр — ресторан Fashion Food Fabrique (3F), он оплачивается отдельно.</li>
+          <li><strong>Показ площадки.</strong> Зал лучше увидеть заранее: оценить рассадку, сцену, свет и маршрут гостей от входа. В СТОРИ можно записаться на просмотр.</li>
+        </ol>
+
+        <h2>Конференция в центре Москвы: что это даёт</h2>
+        <p>Место важно не меньше, чем сам зал. Если конференция в центре Москвы проходит рядом с метро, участникам проще добраться, а организатору проще рассчитать время на сбор гостей и начало программы.</p>
+        <p>СТОРИ находится по адресу Пятницкий переулок, 2, внутри Садового кольца, в минуте пешком от метро «Новокузнецкая».</p>
+
+        <h2>Подготовка конференции: практические шаги</h2>
+        <ol>
+          <li>Утвердите программу, тайминг и список выступающих.</li>
+          <li>Определите формат рассадки и ориентировочное число участников.</li>
+          <li>Составьте список техники и требований к презентациям.</li>
+          <li>Продумайте регистрацию: как гости попадают в зал, где получают бейджи и оставляют одежду.</li>
+          <li>Решите вопрос с питанием и перерывами.</li>
+          <li>Договоритесь о проверке техники и презентаций до начала мероприятия.</li>
+          <li>Назначьте ответственных с вашей стороны и со стороны площадки.</li>
+        </ol>
+
+        <h2>Посмотреть площадку</h2>
+        <p>Если вы подбираете площадку для конференции, посмотрите фотографии зон выше или запишитесь на просмотр: расскажем, как лучше расставить зал под вашу программу. Примеры других мероприятий — в <a href="https://storyevent.ru/portfolio/">портфолио</a>, а материалы о выборе места — в <a href="https://storyevent.ru/blog/category/vybor-ploshchadki/">блоге</a>.</p>
+        <p class="seo-cta"><a href="#apply" class="btn btn-dark" data-go-form data-cta="seo" style="text-decoration:none;">Записаться на просмотр</a></p>
+      </div>
+    </details>
   </div>
 </section>
 
